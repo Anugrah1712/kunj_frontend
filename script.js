@@ -76,8 +76,8 @@ async function sendMessage() {
   if (userInput === "") return;
 
   isProcessing = true;
-  userInputEl.disabled = true;
-  sendButton.disabled = true;
+  sendButton.disabled = true; // Only disable send button
+  sendButton.classList.add("disabled-button"); // ✨ Fade out button
 
   // Add user message
   let userMessage = document.createElement("p");
@@ -116,8 +116,8 @@ async function sendMessage() {
     document.getElementById("chat-messages").appendChild(errorMessage);
   } finally {
     isProcessing = false;
-    userInputEl.disabled = false;
-    sendButton.disabled = false;
+    sendButton.disabled = false; // Re-enable send button
+    sendButton.classList.remove("disabled-button"); // ✨ Restore button
     autoScroll();
   }
 }
