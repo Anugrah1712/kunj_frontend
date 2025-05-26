@@ -333,44 +333,20 @@
     </div>
   </div>
   
-  
-  <!-- Chat Icon (Click to Open Chat) -->
-<!--<div id="chat-icon">💬</div> -->
+<!-- Load React and ReactDOM from CDN -->
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 
+<!-- Load your published chatbot widget from unpkg -->
+<script src="https://unpkg.com/rag-chatbot-ui-kunjfrontend@1.0.0/dist/chatbot-widget.iife.js"></script>
 
-<div id="chat-icon">
-  <span id="chat-text">AI-Kunj</span> <!-- Added "AI-Kunj" text -->
-  <i class="fas fa-comments"></i> <!-- Chat Bubble Icon -->
-  <img src="Profile.png" alt="Chat Icon">
-</div>
+<!-- Mounting container for chatbot -->
+<div id="chatbot-root"></div>
 
-<!-- Chat Window -->
- 
-<!-- Chat Window -->
-<div id="chat-window">
-  <div id="chat-header">
-    <span>AI-Kunj</span>
-    <i id="reset-history" class="fas fa-sync-alt" title="Reset Chat"></i>
-    <button id="close-chat">&times;</button>
-  </div>
-  <div id="chat-body">
-    <div id="chat-messages">
-      <p class="bot-message">Hi! I’m the AI voice of Kunjesh. My avatar is ready to intract!</p>
-    </div>
-  </div>
-  <div id="chat-input">
-    <input type="text" id="user-input" placeholder="Type a message..." />
-    <button id="mic-button" title="Hold to Speak 🎤">
-      <i class="fas fa-microphone"></i>
-    </button>    
-    <button id="send-message"><i class="fas fa-paper-plane"></i></button>
-  </div>
-  
-</div>
-
-<!-- Chat Icon Code End (Click to Open Chat ) -->
-
-  <script src="script.js"></script>
+<!-- Initialize chatbot widget -->
+<script>
+  window.mountChatbotWidget('chatbot-root');
+</script>
 
 </body>
 </html>
